@@ -1,0 +1,30 @@
+#+TITLE: Simple systemd unit
+#+OPTIONS: ^:nil
+#+PROPERTY: header-args:sh :session *shell simple-systemd-unit sh* :results silent raw
+#+PROPERTY: header-args:python :session *shell simple-systemd-unit python* :results silent raw
+
+** System environment
+
+- CentOS Linux release 8.1.1911 (Core)
+
+** Unit file
+
+Placed in =/lib/systemd/system/foo.service=
+
+#+BEGIN_SRC sh
+[Unit]
+Description=Foo
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/foo.executable
+
+[Install]
+WantedBy=multi-user.target
+#+END_SRC
+
+** Restrictions
+
+- Daemon executable file must be under =/usr/local/bin/= directory.
+
+- =/usr/local/bin/foo.executable= must be executable.
