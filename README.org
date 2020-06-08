@@ -23,6 +23,15 @@ ExecStart=/usr/local/bin/foo.executable
 WantedBy=multi-user.target
 #+END_SRC
 
+** Reload systemd units
+
+After every editing:
+
+#+BEGIN_SRC sh
+systemctl daemon-reload
+#+END_SRC
+
+
 ** Restrictions
 
 - Daemon executable file must be under =/usr/local/bin/= directory.
