@@ -1,0 +1,9 @@
+[Unit]
+Description=Foo
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/foo.executable
+
+[Install]
+WantedBy=multi-user.target

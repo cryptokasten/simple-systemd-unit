@@ -11,7 +11,7 @@
 
 Placed in =/lib/systemd/system/foo.service=
 
-#+BEGIN_SRC sh
+#+BEGIN_SRC conf :tangle lib/systemd/system/foo.service
 [Unit]
 Description=Foo
 
